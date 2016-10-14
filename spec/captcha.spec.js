@@ -10,15 +10,26 @@ function Captcha(P,O,L,R)
   }
 }
 function Operator(O)
-{
-   var Ope ='';
-   if(O === 1)
-    {
-      Ope = "+";
-    }
-   else
-    {
-      Ope = "-";
-    }
-  return Ope;
-}
+  {
+       var Ope ='';
+       if(O === 1)
+          {
+            Ope = "+";
+          }
+       else
+          {
+            Ope = "-";
+          }
+      return Ope;
+  }
+function Left(P,L)
+	{
+  		 if(P === 1)
+      		{
+      			return L;
+      		}
+    		else
+      		{
+      			return number[L].toString();
+      		}
+	}
