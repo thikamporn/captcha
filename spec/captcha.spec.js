@@ -1,4 +1,4 @@
-const number = ['ZERO','ONE','TWO','THREE','FOUR','FIVE','SIX','SEVEN','EIGTH','NINE'];
+const number = ['ZERO','ONE','TWO','THREE','FOUR','FIVE','SIX','SEVEN','EIGHT','NINE'];
 function Captcha(P,O,L,R)
 {
   this.generate = function()
@@ -103,4 +103,61 @@ describe('Captcha App' ,  function()
     });
 	});
 
+  //pattern 2
+  describe('Pattern is 2', function()
+  {
+    const pattern = 2
+    ////////+
+    it('should return "ZERO + 1" when input is 2,1,0,1' , function()
+    {
+       let app = new Captcha(pattern,1,0,1);
+        expect(app.generate()).toEqual('ZERO + 1');
+    });
+    it('should return "ONE + 1" when input is 2,1,1,1' , function()
+    {
+      let app = new Captcha(pattern,1,1,1);
+       expect(app.generate()).toEqual('ONE + 1');
+    });
+    it('should return "TWO + 1" when input is 2,1,2,1' , function()
+    {
+      let app = new Captcha(pattern,1,2,1);
+       expect(app.generate()).toEqual('TWO + 1');
+    });
+    it('should return "THREE + 1" when input is 2,1,3,1' , function()
+    {
+       let app = new Captcha(pattern,1,3,1);
+        expect(app.generate()).toEqual('THREE + 1');
+    });
+    it('should return "FOUR + 1" when input is 2,1,4,1' , function()
+    {
+       let app = new Captcha(pattern,1,4,1);
+        expect(app.generate()).toEqual('FOUR + 1');
+    });
+    //////////-
+    it('should return "FIVE - 1" when input is 2,2,5,1' , function()
+    {
+       let app = new Captcha(pattern,2,5,1);
+        expect(app.generate()).toEqual('FIVE - 1');
+    });
+    it('should return "SIX - 1" when input is 2,2,6,1' , function()
+    {
+       let app = new Captcha(pattern,2,6,1);
+        expect(app.generate()).toEqual('SIX - 1');
+    });
+    it('should return "SEVEN - 1" when input is 2,2,7,1' , function()
+    {
+       let app = new Captcha(pattern,2,7,1);
+        expect(app.generate()).toEqual('SEVEN - 1');
+    });
+    it('should return "EIGHT - 1" when input is 2,2,8,1' , function()
+    {
+       let app = new Captcha(pattern,2,8,1);
+        expect(app.generate()).toEqual('EIGHT - 1');
+    });
+    it('should return "NINE - 1" when input is 2,2,9,1' , function()
+    {
+       let app = new Captcha(pattern,2,9,1);
+        expect(app.generate()).toEqual('NINE - 1');
+    });
+  });
 });
