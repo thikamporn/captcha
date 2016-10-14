@@ -33,3 +33,14 @@ function Left(P,L)
       			return number[L].toString();
       		}
 	}
+function Right(P,R)
+    {
+      if(P === 2)
+        {
+          return R;
+        }
+      else
+        {
+          return number[R].toString();
+        }
+    }
